@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>Trackmaps</title>
+    <link href="trackmaps.css" rel="stylesheet" type="text/css">
+    <script src="trackmaps.js"></script>
+</head>
+<body onload="onLoad()">
+
+    <header>
+        <div class="topnav">
+            <a>
+                Metro track maps by DYM
+                <!--</a></a>-->
+                <label id="scale">
+                    0
+                </label>
+            </a>
+            
+            <!-- <form action="select1.php" method="post"> </form>-->
+            <p>
+                <select id="select" onChange="changeImage(value)">
+                    <optgroup label="Западная Европа">
+                        <option value="Glasgow-en">Глазго</option>
+                    </optgroup>
+                    <optgroup label="Восточная Европа">
+                        <!-- <option disabled value="default">Будапешт</option> -->
+                        <!-- <option disabled value="default">Москва</option> -->
+                        <option selected value="SPB-ru">Санкт-Петербург</option>
+                        <!-- <option disabled value="default">Киев</option> -->
+                        <!-- <option disabled value="default">Прага</option> -->
+                        <!-- <option disabled value="default">Харьков</option> -->
+
+                        <option disabled value="Minsk-ru">Минск</option>
+                        <!-- <option disabled value="default">Волгоград</option> -->
+                        <!-- <option disabled value="default">Нижний Новгород</option> -->
+                        <!-- <option disabled value="default">Новосибирск</option> -->
+                        <option value="Samara-ru">Самара</option>
+                        <!-- <option disabled value="default">Екатеринбург</option> -->
+                        <!-- <option disabled value="default">Варшава</option> -->
+                        <!-- <option disabled value="default">Днепр</option> -->
+                        <option disabled value="Sofia-ru">София</option>
+                        <option value="Kazan-ru">Казань</option>
+                    </optgroup>
+                    <optgroup label="Кавказ">
+                        <option disabled value="default">Тбилиси</option> 
+                        <option value="Baku-ru">Баку</option>
+                        <option disabled value="default">Ереван</option>
+                        <!--<option value="Novyafon-ru">Новый Афон</option>-->
+                    </optgroup>
+                    <optgroup label="Средняя Азия">
+                        <option value="Toshkent-ru">Ташкент</option>
+
+                    </optgroup>
+                    <optgroup label="Азия">
+                        <option value="Puongyang-ru">Пхеньян</option>
+                    </optgroup>
+                    <optgroup label="Северная Америка">
+                        <option disabled value="Toronto-en">Торонто</option>
+                        <option disabled value="DC-en">Вашингтон</option>
+                    </optgroup>
+                </select>
+            </p>
+            <a>
+                <button type="button" id="+" onclick="zoomIn()"> Приблизить </button>
+            </a>
+            <a>
+                <button type="button" onclick="zoomDefault()"> 100%</button>
+            </a>
+            <a>
+                <button disabled type="button" id="-" onclick="zoomOut()"> Отдалить </button>
+            </a>
+            <a>
+                <button disabled id="darktheme" onclick="changeTheme()">Темная тема</button>
+            </a>
+            <!--<a>
+        <button id="home" onclick="location.href='../index.html';" style="float: right;">На главную (DYM-Home)</button>
+    </a>-->
+        </div>
+    </header>
+
+    <content>
+        <img id="image"></img>
+    </content>
+
+</body>
