@@ -3,6 +3,10 @@ html
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+	margin: 0;
+}
+
 header 
 {
 	position: sticky; /*(recomended)*/
@@ -22,6 +26,10 @@ content
 }
 
 select, button {height: 40px}
+
+select{
+	width: 160px;
+}
 
 img 
 {
